@@ -1,0 +1,185 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Asegura que ocupen todo el viewport */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    align-content: center;
+    height: 10vh;
+    font-size: 2vw;
+}
+
+/* Imagen del escudo */
+.escudo-malaga {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 10vh;
+    z-index: 1;
+}
+
+/* Barra de navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 5vh;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 1;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1.1vw;
+}
+
+nav a:hover {
+    color: rgb(0, 132, 255);
+    text-decoration: underline;
+}
+
+.navegacion {
+    padding: 0vh 3vw;
+}
+
+/* Main */
+main {
+    background-color: black;
+    color: white;
+    width: 100%;
+    min-height: calc(100vh - 16vh); /* Header + footer */
+    padding: 3vh 3vw;
+    position: relative;
+}
+
+.imagen-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+/* Títulos y párrafos */
+.titulo {
+    text-align: center;
+    padding-bottom: 3vh;
+    font-size: 2.5vw;
+}
+
+.parrafo {
+    font-size: 1.2vw;
+}
+
+main > *:last-child {
+    margin-bottom: 0;
+}
+
+/* Footer */
+footer {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 6vh;
+    text-align: center;
+    align-content: center;
+    margin-top: auto;
+}
+
+/* Media queries para tablets y móviles */
+@media (max-width: 768px) { /* Tablets en orientación vertical */
+    header {
+        font-size: 3vw;
+        height: 12vh;
+    }
+
+    .escudo-malaga {
+        height: 8vh;
+        right: 1vw;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    nav a {
+        font-size: 2vw; /* Más grande para tablets */
+        padding: 0.5vh 2vw;
+    }
+
+    main {
+        padding: 2vh 2vw;
+    }
+
+    .titulo {
+        font-size: 4vw;
+    }
+
+    .parrafo {
+        font-size: 1.8vw;
+    }
+}
+
+@media (max-width: 480px) { /* Móviles */
+    header {
+        font-size: 4vw;
+        height: 15vh;
+    }
+
+    .escudo-malaga {
+        height: 6vh;
+        right: 2vw;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1vh 2vw;
+    }
+
+    nav a {
+        font-size: 3vw; /* Texto más grande para móviles */
+        padding: 1vh 0;
+    }
+
+    main {
+        padding: 3vh 5vw;
+    }
+
+    .titulo {
+        font-size: 5vw;
+    }
+
+    .parrafo {
+        font-size: 2.5vw;
+    }
+
+    footer {
+        font-size: 3vw;
+        padding: 2vh 0;
+    }
+}
