@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario</title>
+    <link rel="stylesheet" href="./styles/cuestionario.css">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header><h1>Cuestionario</h1></header>
+
+    <!-- Contenedor para nav y main -->
+    <div class="contenedor">
+        <nav>
+            <h3 class="navegacion"><a href="index.html">Historia sobre la pesca en Málaga</h3></a>
+            <h3 class="navegacion"><a href="licencias.html">Licencias necesarias</h3></a>
+            <h3 class="navegacion"><a href="peces.html">Tipos de peces</h3></a>
+            <h3 class="navegacion"><a href="tecnicas.html">Técnicas de pesca</h3></a>
+            <h3 class="navegacion"><a href="cuestionario.html">Cuestionario sobre pesca</h3></a>
+        </nav>
+
+        <div class="cuestionario">
+            <form>
+                <div class="pregunta">
+                    <h3 class="pregunta2">1. ¿Te gusta la pesca en agua dulce o salada?</h3>
+                    <input type="radio" id="agua_dulce" name="pesca" value="agua_dulce">
+                    <label for="agua_dulce">Agua dulce</label>
+                    <input type="radio" id="agua_salada" name="pesca" value="agua_salada">
+                    <label for="agua_salada">Agua salada</label>
+                </div>
+              
+                <div class="pregunta">
+                    <h3 class="pregunta2">2. ¿Cuál es tu técnica de pesca favorita?</h3>
+                    <select id="tecnica_pesca" name="tecnica_pesca">
+                        <option value="caña">Caña</option>
+                        <option value="mosca">Mosca</option>
+                        <option value="spinning">Spinning</option>
+                        <option value="otra">Otra</option>
+                    </select>
+                </div>
+              
+                <div class="pregunta">
+                    <h3 class="pregunta2">3. ¿Qué tipo de pez te gustaría pescar?</h3>
+                    <input type="checkbox" id="Dorada" name="pez" value="Dorada">
+                    <label for="Dorada">Dorada</label>
+                    <input type="checkbox" id="Pintarroja" name="pez" value="Pintarroja">
+                    <label for="Pintarroja">Pintarroja</label>
+                    <input type="checkbox" id="Boquerón" name="pez" value="Boquerón">
+                    <label for="Boquerón">Boquerón</label>
+                </div>
+               
+                <div class="pregunta">
+                    <h3 class="pregunta2">4. ¿Cuántas horas al día te gustaría dedicar a la pesca?</h3>
+                    <input type="number" id="horas_pesca" name="horas_pesca" min="1" max="12">
+                </div>
+               
+                <div class="pregunta">
+                    <h3 class="pregunta2">5. ¿Te gustaría pescar solo o con amigos?</h3>
+                    <input type="radio" id="solo" name="compania" value="solo">
+                    <label for="solo">Solo</label>
+                    <input type="radio" id="amigos" name="compania" value="amigos">
+                    <label for="amigos">Con amigos</label>
+                </div>
+               
+                <div class="pregunta">
+                    <h3 class="pregunta2">6. ¿Cuál es tu presupuesto para equipo de pesca?</h3>
+                    <input type="range" id="presupuesto" name="presupuesto" min="0" max="1000" value="500">
+                    <label for="presupuesto">0-1000€</label>
+                </div>
+                
+                <div class="pregunta">
+                    <h3 class="pregunta2">7. ¿Te gustaría pescar en un lago, río o mar?</h3>
+                    <select id="lugar_pesca" name="lugar_pesca">
+                        <option value="lago">Lago</option>
+                        <option value="rio">Río</option>
+                        <option value="mar">Mar</option>
+                    </select>
+                </div>
+              
+                <div class="pregunta">
+                    <h3 class="pregunta2">8. ¿Cuál es tu nivel de experiencia en pesca?</h3>
+                    <input type="radio" id="principiante" name="experiencia" value="principiante">
+                    <label for="principiante">Principiante</label>
+                    <input type="radio" id="intermedio" name="experiencia" value="intermedio">
+                    <label for="intermedio">Intermedio</label>
+                    <input type="radio" id="avanzado" name="experiencia" value="avanzado">
+                    <label for="avanzado">Avanzado</label>
+                </div>
+              
+                <div class="pregunta">
+                    <h3 class="pregunta2">9. ¿Te gustaría pescar en un lugar con mucha vegetación o sin ella?</h3>
+                    <input type="radio" id="vegetacion" name="vegetacion" value="vegetacion">
+                    <label for="vegetacion">Con vegetación</label>
+                    <input type="radio" id="sin_vegetacion" name="vegetacion" value="sin_vegetacion">
+                    <label for="sin_vegetacion">Sin vegetación</label>
+                </div>
+               
+                <div class="pregunta">
+                    <h3 class="pregunta2">10. ¿Cuál es tu objetivo principal al pescar?</h3>
+                    <textarea id="objetivo" name="objetivo" rows="5" cols="30"></textarea>
+                </div>
+
+                <div class="pregunta">
+                    <h3 class="pregunta2">Aviso de privacidad</h3>
+                    <input type="checkbox" id="privacidad" name="privacidad" required>
+                    <label for="privacidad">He leído y acepto que mis datos serán almacenados y utilizados para fines estadísticos y de mejora del servicio.</label>
+                </div>
+            </form>
+            <button>Enviar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Realizado por Miguel Ángel Pérez García</p>
+    </footer>
+</body>
+</html>
